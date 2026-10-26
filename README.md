@@ -9,10 +9,13 @@ This project compares two implementations of naive matrix multiplication:
 - **IJK:** Loop order `i → j → k`
 - **IKJ:** Loop order `i → k → j`
 
-Both algorithms have \(O(N^3)\) time complexity, but exhibit different memory access patterns when processing row-major matrices.
+Both algorithms have $O(N^3)$ time complexity, but exhibit different memory access patterns when processing row-major matrices.
 
 The goal is to evaluate their relative performance while maintaining numerical correctness.
+Or use the helper script:
 
+./run.sh matmul 64     # IJK vs IKJ benchmark for N = 64
+./run.sh cache         # row-major vs column-major demo
 ## 2. Experimental Environment
 
 | Component | Specification |
@@ -97,6 +100,13 @@ Run the benchmarks:
 printf "64\n" | ./build/matmul
 printf "128\n" | ./build/matmul
 printf "256\n" | ./build/matmul
+```
+
+Or use the helper script:
+
+```bash
+./run.sh matmul 64     # IJK vs IKJ benchmark for N = 64
+./run.sh cache         # row-major vs column-major demo
 ```
 
 Results are appended to `results/matmul_results.csv`.
