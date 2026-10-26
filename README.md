@@ -12,10 +12,7 @@ This project compares two implementations of naive matrix multiplication:
 Both algorithms have $O(N^3)$ time complexity, but exhibit different memory access patterns when processing row-major matrices.
 
 The goal is to evaluate their relative performance while maintaining numerical correctness.
-Or use the helper script:
 
-./run.sh matmul 64     # IJK vs IKJ benchmark for N = 64
-./run.sh cache         # row-major vs column-major demo
 ## 2. Experimental Environment
 
 | Component | Specification |
